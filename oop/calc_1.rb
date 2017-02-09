@@ -32,23 +32,7 @@ class SimpleCalculator
 
 end
 
-class FancyCalculator
-
-  def add(first_number, second_number)
-    first_number + second_number
-  end
-
-  def subtract(first_number, second_number)
-    first_number - second_number
-  end
-
-  def multiply(first_number, second_number)
-    first_number * second_number
-  end
-
-  def divide(first_number, second_number)
-    first_number / second_number
-  end
+class FancyCalculator < SimpleCalculator
 
   def square_root(number)
     Math.sqrt(number)
@@ -57,4 +41,60 @@ class FancyCalculator
 end
 
 # Write your own driver code below:
+
+fc = FancyCalculator.new
+puts "Testing Addition 2 + 2"
+result = fc.add(2, 2)
+puts "result: #{result}" 
+if result == 4
+  puts "pass"
+else 
+  puts "F"
+end 
+
+puts "----"
+puts "Testing Subtraction 4 - 2"
+
+result = fc.subtract(4, 2)
+puts "result: #{result}" 
+if result == 2
+  puts "pass"
+else 
+  puts "F"
+end 
+
+puts "----"
+puts "Testing Multiplication 4 * 2"
+
+result = fc.multiply(4, 2)
+puts "result: #{result}" 
+if result == 8
+  puts "pass"
+else 
+  puts "F"
+end 
+
+puts "----"
+puts "Testing Division 4 / 2"
+
+result = fc.divide(4, 2)
+puts "result: #{result}" 
+if result == 2
+  puts "pass"
+else 
+  puts "F"
+end 
+
+puts "----"
+puts "Testing Square Root 4"
+
+result = fc.square_root(4)
+puts "result: #{result}" 
+if result == 2
+  puts "pass"
+else 
+  puts "F"
+end 
+
+
 

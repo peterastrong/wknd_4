@@ -3,7 +3,17 @@
 # bonus: returns a string of all missing letters as a string. ex: find_missing_letter("ace") would return "bd", write your own test.
 
 def find_missing_letter(range)
+  letter_range = (range.chars[0]..range.chars[-1]).to_a 
 
+  if letter_range.length != range.chars.length
+    letter_range.each do |letter|  
+      if range.chars.include?(letter) == false
+        return letter
+      end
+    end 
+  else
+    nil
+  end 
 end
 
 # Driver code - don't touch anything below this line.
